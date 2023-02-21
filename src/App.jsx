@@ -57,24 +57,21 @@ const App = () => {
       <List />
 
       <ul>
-        {list.map((item) => {
-          return <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
-        })}
+        {list.map((item) => 
+        <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
+        )}
       </ul>
 
       <ul>
-        {list.map((item, index) => {
-          return (
+        {list.map((item, index) =>
             <li key={index}>
               {item.title}
             </li>
-          );
-        })}
+        )}
       </ul>
 
       <ul>
-        {list.map((item) => {
-          return (
+        {list.map((item) =>
             <li key={item.objectID}>
               <span>
                 <a href={item.url}>{item.title}</a>
@@ -83,8 +80,7 @@ const App = () => {
               <span> {item.num_comments}</span>
               <span> {item.points}</span>
             </li>
-          );
-        })}
+        )}
       </ul>
 
 
@@ -99,11 +95,9 @@ const App = () => {
 }
 
 {/*child component to app sibling to search*/}
-const List = () => {
-  return (
+const List = () =>
     <ul>
-      {list.map((item) => {
-        return (
+      {list.map((item) =>
           <li key={item.objectID}>
             <span>
               <a href={item.url}>{item.title}</a>
@@ -112,21 +106,17 @@ const List = () => {
             <span> {item.num_comments}</span>
             <span> {item.points}</span>
           </li>
-        )
-      })}
+      )}
     </ul>
-  )
-}
+  
+
 
 {/*child component to app sibling to list*/}
-const Search = () => {
-  return (
+const Search = () =>
     <div>
     <label htmlFor="search">Search: </label>
     <input id='search' type="text" />
     </div>
-  )
-}
 
 {/*Both search and list are considered leaf components because they do not render anything*/}
 {/*Each component represents a single unit in the application, making it maintainable and predictable*/}
