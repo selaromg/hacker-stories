@@ -122,4 +122,20 @@ const Search = () =>
 {/*Each component represents a single unit in the application, making it maintainable and predictable*/}
 
 
+{/* Block Body:
+
+function Search(item) {
+  return (
+    //function
+  )
+}}
+/=*/}
+
+{/*Concise Body:
+
+const Search = (item) =>
+  //function
+
+*/}
+
 export default App
