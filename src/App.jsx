@@ -28,7 +28,7 @@ const list = [
 ];
 
 
-{/*parent component*/}
+{/*parent/root component*/}
 function App() {
 
   return (
@@ -104,5 +104,7 @@ function Search() {
     </div>
   )
 }
+
+{/*Both search and list are considered leaf components because they do not render anything*/}
 
 export default App
