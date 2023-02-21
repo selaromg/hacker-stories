@@ -43,11 +43,28 @@ function App() {
           return <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
         })}
       </ul>
-      
+
       <ul>
         {list.map(function(item, index) {
           return (
-            <li key={index}>{item.title}</li>
+            <li key={index}>
+              {item.title}
+            </li>
+          );
+        })}
+      </ul>
+
+      <ul>
+        {list.map(function(item) {
+          return (
+            <li key={item.objectID}>
+              <span>
+                <a href={item.url}>{item.title}</a>
+              </span>
+              <span> {item.author}</span>
+              <span> {item.num_comments}</span>
+              <span> {item.points}</span>
+            </li>
           );
         })}
       </ul>
