@@ -91,6 +91,9 @@ function App() {
       <ul>
         <li>{robin.getName()}</li>
       </ul>
+
+      <List />
+      <List />
     </div>
   )
 }
