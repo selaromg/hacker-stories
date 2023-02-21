@@ -28,6 +28,21 @@ const list = [
 ];
 
 
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  getName() {
+    return this.firstName + ' ' + this.lastName;
+  }
+}
+
+
+const robin = new Person('Robin', 'Wieruch');
+
 {/*parent/root component*/}
 function App() {
 
@@ -71,6 +86,11 @@ function App() {
           );
         })}
       </ul>
+
+
+      <ul>
+        <li>{robin.getName()}</li>
+      </ul>
     </div>
   )
 }
@@ -85,7 +105,7 @@ function List() {
             <span>
               <a href={item.url}>{item.title}</a>
             </span>
-            <span>  {item.author}</span>
+            <span> {item.author}</span>
             <span> {item.num_comments}</span>
             <span> {item.points}</span>
           </li>
@@ -106,5 +126,7 @@ function Search() {
 }
 
 {/*Both search and list are considered leaf components because they do not render anything*/}
+{/*Each component represents a single unit in the application, making it maintainable and predictable*/}
+
 
 export default App
