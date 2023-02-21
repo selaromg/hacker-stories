@@ -19,7 +19,7 @@ const list = [
   },
   {
     title: 'Gigi',
-    url: 'www.github.com/selaromg',
+    url: 'https://github.com/selaromg',
     author: 'Gigi Morales',
     num_comments: 0,
     points: 10,
@@ -40,7 +40,15 @@ function App() {
 
       <ul>
         {list.map(function (item) {
-          return <li><a href={item.url}>{item.title}</a> {item.author}</li>
+          return <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
+        })}
+      </ul>
+      
+      <ul>
+        {list.map(function(item, index) {
+          return (
+            <li key={index}>{item.title}</li>
+          );
         })}
       </ul>
     </div>
