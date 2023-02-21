@@ -3,7 +3,7 @@ import * as React from 'react';
 const list = [
   {
     title: 'React',
-    url: 'https://reatjs.org/',
+    url: 'https://reactjs.org/',
     author: 'Jordan Walke',
     num_comments: 3,
     points: 4,
@@ -17,6 +17,14 @@ const list = [
     points: 5,
     objectID: 1,
   },
+  {
+    title: 'Gigi',
+    url: 'www.github.com/selaromg',
+    author: 'Gigi Morales',
+    num_comments: 0,
+    points: 10,
+    objectID: 2,
+  }
 ];
 
 function App() {
@@ -25,14 +33,14 @@ function App() {
     <div>
       <h1>My Hacker Stories</h1>
 
-      <label htmlFor="search">Search:</label>
+      <label htmlFor="search">Search: </label>
       <input id='search' type="text" />
 
       <hr />
 
       <ul>
         {list.map(function (item) {
-          return <li>{item.title}</li>
+          return <li><a href={item.url}>{item.title}</a> {item.author}</li>
         })}
       </ul>
     </div>
