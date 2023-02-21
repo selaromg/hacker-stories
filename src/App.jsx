@@ -57,13 +57,13 @@ const App = () => {
       <List />
 
       <ul>
-        {list.map(function (item) {
+        {list.map((item) => {
           return <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
         })}
       </ul>
 
       <ul>
-        {list.map(function(item, index) {
+        {list.map((item, index) => {
           return (
             <li key={index}>
               {item.title}
@@ -73,7 +73,7 @@ const App = () => {
       </ul>
 
       <ul>
-        {list.map(function(item) {
+        {list.map((item) => {
           return (
             <li key={item.objectID}>
               <span>
@@ -102,7 +102,7 @@ const App = () => {
 const List = () => {
   return (
     <ul>
-      {list.map(function(item) {
+      {list.map((item) => {
         return (
           <li key={item.objectID}>
             <span>
