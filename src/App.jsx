@@ -44,7 +44,7 @@ class Person {
 const robin = new Person('Robin', 'Wieruch');
 
 {/*parent/root component*/}
-function App() {
+const App = () => {
 
   return (
     <div>
@@ -99,7 +99,7 @@ function App() {
 }
 
 {/*child component to app sibling to search*/}
-function List() {
+const List = () => {
   return (
     <ul>
       {list.map(function(item) {
@@ -119,7 +119,7 @@ function List() {
 }
 
 {/*child component to app sibling to list*/}
-function Search() {
+const Search = () => {
   return (
     <div>
     <label htmlFor="search">Search: </label>
