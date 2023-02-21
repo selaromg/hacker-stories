@@ -27,6 +27,8 @@ const list = [
   }
 ];
 
+
+{/*parent component*/}
 function App() {
 
   return (
@@ -73,6 +75,7 @@ function App() {
   )
 }
 
+{/*child component to app sibling to search*/}
 function List() {
   return (
     <ul>
@@ -92,6 +95,7 @@ function List() {
   )
 }
 
+{/*child component to app sibling to list*/}
 function Search() {
   return (
     <div>
