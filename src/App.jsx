@@ -136,6 +136,8 @@ function Search(item) {
 const Search = (item) =>
   //function
 
+
+  an implicit return statement is attached
 */}
 
 export default App
