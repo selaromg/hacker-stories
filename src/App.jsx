@@ -112,12 +112,21 @@ const List = () =>
 
 
 {/*child component to app sibling to list*/}
-const Search = () =>
+const Search = () => {
+  const handleChange = (event) => {
+    //synthetic event
+    console.log(event);
+    //value of target (this is where you input HTML element)
+    console.log(event.target.value);
+  }
+
+  return(
     <div>
     <label htmlFor="search">Search: </label>
-    <input id='search' type="text" />
+    <input id='search' type="text" onChange={handleChange}/>
     </div>
-
+  );
+};
 {/*Both search and list are considered leaf components because they do not render anything*/}
 {/*Each component represents a single unit in the application, making it maintainable and predictable*/}
 
