@@ -47,8 +47,10 @@ const App = () => {
     }
   ];
 
+  const[searchTerm, setSearchTerm] = React.useState('');
+
   const handleSearch = (event) => {
-    console.log(event.target.value);
+    setSearchTerm(event.target.value);
   }
 
   return (
@@ -94,26 +96,10 @@ const Item = (props) => (
 {/*child component to app sibling to list*/}
 const Search = (props) => {
 
-const[searchTerm, setSearchTerm] = React.useState('');
-
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value); //state updater function
-
-    props.onSearch(event);
-  }
-
-
-
-  return(
     <div>
     <label htmlFor="search">Search: </label>
-    <input id='search' type="text" onChange={handleChange}/>
-
-    <p>
-      Searching for <strong>{searchTerm}</strong>.
-    </p>
+    <input id='search' type="text" onChange={props.onSearch}/>
     </div>
-  );
 };
 {/*Both search and list are considered leaf components because they do not render anything*/}
 {/*Each component represents a single unit in the application, making it maintainable and predictable*/}
