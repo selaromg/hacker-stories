@@ -1,33 +1,5 @@
 import * as React from 'react';
 
-const list = [
-  {
-    title: 'React',
-    url: 'https://reactjs.org/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
-  },
-  {
-    title: 'Redux',
-    url: 'https://redux.js.org/',
-    author: 'Dan Ambrov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
-  },
-  {
-    title: 'Gigi',
-    url: 'https://github.com/selaromg',
-    author: 'Gigi Morales',
-    num_comments: 0,
-    points: 10,
-    objectID: 2,
-  }
-];
-
-
 
 class Person {
   constructor(firstName, lastName) {
@@ -41,10 +13,12 @@ class Person {
 }
 
 
-const robin = new Person('Robin', 'Wieruch');
+
 
 {/*parent/root component*/}
 const App = () => {
+
+  const robin = new Person('Robin', 'Wieruch');
 
   const stories = [
     {
@@ -80,34 +54,6 @@ const App = () => {
       <Search />
 
       <hr />
-
-
-      <ul>
-        {list.map((item) => 
-        <li key={item.objectID}><a href={item.url}>{item.title}</a> {item.author}</li>
-        )}
-      </ul>
-
-      <ul>
-        {list.map((item, index) =>
-            <li key={index}>
-              {item.title}
-            </li>
-        )}
-      </ul>
-
-      <ul>
-        {list.map((item) =>
-            <li key = {item.objectID}>
-              <span>
-                <a href = {item.url}>{item.title}</a>
-              </span>
-              <span> {item.author}</span>
-              <span> {item.num_comments}</span>
-              <span> {item.points}</span>
-            </li>
-        )}
-      </ul>
 
 
       <ul>
